@@ -16,7 +16,7 @@ class CarWashStation:
         self.count_of_ratings = count_of_ratings
 
     def serve_cars(self, cars: list[Car]) -> float:
-        income = sum([self.wash_single_car(car) for car in cars])
+        income = sum(self.wash_single_car(car) for car in cars)
         return income
 
     def calculate_washing_price(self, car: Car) -> float:
